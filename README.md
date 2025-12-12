@@ -19,14 +19,18 @@ The main pipeline from raw data sources to model evaluation outputs is shown in 
 To run the main pipeline above, you need Python >=3.9.6 (3.12 and above preferred) and Jupyter (2025.9.1 or later). Download the preprocessed data files using the below links:
 - [AA_FLIGHT_RECORD_FINAL_HUBS.csv](https://drive.google.com/file/d/1KGSkBiJovnoivyXJCgga6z2BU4i6z5g8/view?usp=sharing)
 - [All_Hubs_Weather_2023-01-01_to_2025-01-01.csv](https://drive.google.com/file/d/1Z3aVc8Fl5FgnsHX6g4x0UHewvSxV0OiT/view?usp=sharing)
-And put them into the ```./data/preprocessed``` directory. Or if you plan to skip EDA and merging to download the ready-made dataset for modeling:
+And put them into the ```./data/preprocessed``` directory.
+
+Or if you plan to skip EDA and merging to download the ready-made dataset for modeling:
 - [model_final.csv](https://drive.google.com/file/d/1FihltSRtYGIvCIPg82tP1vNLJr0CvBJ5/view?usp=sharing)
 
-Additionally,,
+Library dependencies for the main pipeline are already written into the Jupyter notebooks. Follow the comments to execute step by step.
+
+Additionally, we provide Python scripts for raw data extraction and processing. These are initial trials and not part of the main analytical pipeline as we already have cleansed data files ready for download. If you need to try executing these scripts, you will need:
 
 - An FR24 API access token. This is obtained via subscription to the API service (note: not the flight tracker map subscription!).
 - Python>=3.9.6
-- Manually download the Reporting Carrier On-Time Performance (https://transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ) and T-100 Domestic Segments (https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FIM) data tables, and put these into the ./inputs subfolder, if running the dot_flight_data_query or dot_flight_data_merge scripts.
+- Manually download the Reporting Carrier On-Time Performance (https://transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ) and T-100 Domestic Segments (https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FIM) data tables, and put these into the ```./data./raw``` subfolder, if running the Python scripts.
 
 Create a virtual environment for code execution:
 
@@ -50,3 +54,6 @@ After running, deactivate the virtual environment:
 ```powershell
 deactivate
 ```
+
+## Run
+
