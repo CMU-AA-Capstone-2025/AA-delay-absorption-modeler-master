@@ -6,7 +6,11 @@ This project aims to use open-source, flight-record-related data to construct Ma
 - Classification of whether or not a flight is able to recover departure delay while airborne
 - Numerical prediction of the amount of departure delay time that a flight could cover while airborne
 
-The main pipeline from raw data sources to model evaluation outputs is shown in the below figure.
+Our workflow for this project is demonstrated in the figure below.
+
+<img src="figures/Analytics_workflow.png" width="1500"/>
+
+The main pipeline from raw data sources to model evaluation outputs is shown in the figure below.
 
 
 <img src="figures/AA_pipeline_final.png" width="1500"/>
