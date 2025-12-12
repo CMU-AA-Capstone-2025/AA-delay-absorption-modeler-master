@@ -8,4 +8,7 @@ This project aims to use open-source, flight-record-related data to construct Ma
 
 The main pipeline from raw data sources to model evaluation outputs is shown in the below figure.
 
+
+<img src="figures/AA_pipeline_final.png" width="1500"/>
+
 ## 
