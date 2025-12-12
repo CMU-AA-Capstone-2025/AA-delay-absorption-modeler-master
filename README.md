@@ -58,4 +58,25 @@ deactivate
 ```
 
 ## Run
+### Main Analytical Pipeline
+To run the main pipeline above, simply follow the comments and instructions in the Jupyter notebooks. Note that there might be different options between Google Colab cloud environment and local running, and between GPU and CPU execution. Read thoroughly before execution.
 
+### Raw Data Processing
+To merge T-100 tables from different years into one, run:
+
+```powershell
+python3 preprocessing/flight_data_merge_by_year.py \\
+--inputs data/raw/US_CARRIER_SUMMARY_2023.csv inputs/US_CARRIER_SUMMARY_2024.csv \\
+--out data/preprocessed/US_AA_10airports.csv \\
+--filter-aa \\
+--project-minimal \\
+--dedupe YEAR,MONTH,ORIGIN,DEST,UNIQUE_CARRIER \\
+--aircraft-types data/raw/DOT_AIRCRAFT_TYPE.csv && ls -l data/preprocessed/US_AA_10airports.csv && wc -l data/preprocessed/US_AA_10airports.csv && head -n 10 data/preprocessed/US_AA_10airports.csv
+```
+
+## References
+For more information about the Transtats database, see: https://www.transtats.bts.gov/DataIndex.asp
+
+For more information about the METAR database and the Iowa State University's Mesonet API service, see: https://mesonet.agron.iastate.edu/wx/afos/p.php?pil=METAR&e=202512122003
+
+Final report of this project to be included later.
